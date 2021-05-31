@@ -38,7 +38,6 @@ body {
     margin-bottom: 30px;
     text-align: center;
     color: #F1F1F1;
-    color: papa;
 }
 
 ul {
@@ -51,8 +50,8 @@ ul {
     box-shadow:  16px 16px 32px #351a68,
         -16px -16px 32px #9c5aff;
     min-width: 320px;
-    height: 600px;
-    border: 10px solid #f2f2f2;
+    min-height: 600px;
+    border: 10px solid white;
     border-radius: 25px;
     position: relative;
 }
@@ -73,7 +72,7 @@ input[type="checkbox"]:focus {
     outline: none;
 }
 
-input[type="checkbox"]:checked {
+input:checked {
     counter-increment: score;
 }
 
@@ -98,7 +97,7 @@ input[type="checkbox"]:checked {
     top: 96px;
     left: 60px;
     animation-name: layer-1;
-    animation-duration: 0s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -133,36 +132,28 @@ input[type="checkbox"]:checked {
     background-position: center;
     top: 96px;
     left: 160px;
+    animation-name: layer-2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
 }
 
-input[type="checkbox"] {
-    appearance: checkbox;
-    cursor: pointer;
-    height: 70px;
-    margin: 0;
-    position: relative;
-    top: 30px;
-    right: 10px;
-    width: 100px;
-}
-
-input[type="checkbox"]:focus {
-    appearance: none;
-    outline: none;
-}
-
-input:checked {
-    counter-increment: score;
-}
-
-.score {
-    color: #f2f2f2;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.score::after {
-    content: counter(score)
+@keyframes layer-2 {
+    0% {
+        top: 96px
+    }
+    40% {
+        top: 200px
+    }
+    60% {
+        top: 100px
+    }
+    80% {
+        top: 180px;
+    }
+    100% {
+        top: 96px;
+    }
 }
 
 .layer-3 {
@@ -187,6 +178,28 @@ input:checked {
     background-position: center;
     top: 200px;
     left: 70px;
+    animation-name: layer-4;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes layer-4 {
+    0% {
+        top: 200px
+    }
+    40% {
+        top: 380px
+    }
+    60% {
+        top: 200px
+    }
+    80% {
+        top: 300px;
+    }
+    100% {
+        top: 200px;
+    }
 }
 
 .layer-5 {
@@ -212,6 +225,28 @@ input:checked {
     background-position: center;
     top: 305px;
     left: 200px;
+    animation-name: layer-6;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes layer-6 {
+    0% {
+        top: 305px
+    }
+    40% {
+        top: 450px
+    }
+    60% {
+        top: 305px
+    }
+    80% {
+        top: 450px;
+    }
+    100% {
+        top: 305px;
+    }
 }
 
 .layer-7 {
