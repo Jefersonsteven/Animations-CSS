@@ -1,0 +1,279 @@
+:root {
+    --font-primary: 'Montserrat', sans-serif;
+    --yellow: #F9C91E;
+    --red: #EF3837;
+    --purple: #8034E0;
+    --red-dark: #B00C0C;
+    --purple-dark: #322994;
+    --gradient1: linear-gradient(90deg, #EF3837 -1.81%, #F9C91E 100%);
+    --gradient2: linear-gradient(90deg, #8034E0 -1.81%, #322994 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.6rem;
+    font-family: var(--font-primary);
+    color: #181818;
+    background: var(--gradient2);
+}
+
+.title {
+    font-size: 3.4rem;
+    width: 80%;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #F1F1F1;
+    color: papa;
+}
+
+ul {
+    list-style: none;
+}
+
+.animation-container {
+    counter-reset: score;
+    background-color:  #05051f;
+    box-shadow:  16px 16px 32px #351a68,
+        -16px -16px 32px #9c5aff;
+    min-width: 320px;
+    height: 600px;
+    border: 10px solid #f2f2f2;
+    border-radius: 25px;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    height: 70px;
+    margin: 0;
+    position: relative;
+    top: 30px;
+    right: 10px;
+    width: 100px;
+}
+
+input[type="checkbox"]:focus {
+    appearance: none;
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    counter-increment: score;
+}
+
+.score {
+    color: #f2f2f2;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.score::after {
+    content: counter(score);
+}
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    width: 80px;
+    height: 110px;
+    background-image: url(/assets/SVG/Rabbit.svg);
+    background-size: cover;
+    background-position: center;
+    top: 96px;
+    left: 60px;
+    animation-name: layer-1;
+    animation-duration: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes layer-1 {
+    0% {
+        top: 190px
+    }
+    40% {
+        top: 96px
+    }
+    60% {
+        top: 200px
+    }
+    80% {
+        top: 120px;
+    }
+    100% {
+        top: 220px;
+    }
+}
+
+
+
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 110px;
+    background-image: url(/assets/SVG/Rabbit.svg);
+    background-size: cover;
+    background-position: center;
+    top: 96px;
+    left: 160px;
+}
+
+input[type="checkbox"] {
+    appearance: checkbox;
+    cursor: pointer;
+    height: 70px;
+    margin: 0;
+    position: relative;
+    top: 30px;
+    right: 10px;
+    width: 100px;
+}
+
+input[type="checkbox"]:focus {
+    appearance: none;
+    outline: none;
+}
+
+input:checked {
+    counter-increment: score;
+}
+
+.score {
+    color: #f2f2f2;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.score::after {
+    content: counter(score)
+}
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    width: 245px;
+    height: 352px;
+    background-image: url(/assets/SVG/big-mountain.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: 40px;
+    left: 28px;
+}
+
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    width: 80px;
+    height: 110px;
+    background-image: url(/assets/SVG/Rabbit.svg);
+    background-size: cover;
+    background-position: center;
+    top: 200px;
+    left: 70px;
+}
+
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    width: 223px;
+    height: 273px;
+    background-image: url(/assets/SVG/medium-mountain.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: 20px;
+    left: -2.5px;
+    border-bottom-left-radius: 17px;
+}
+
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    width: 80px;
+    height: 110px;
+    background-image: url(/assets/SVG/Rabbit.svg);
+    background-size: cover;
+    background-position: center;
+    top: 305px;
+    left: 200px;
+}
+
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    width: 141px;
+    height: 167px;
+    background-image: url(/assets/SVG/small-mountain.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: 20px;
+    left: 165px;
+    border-bottom-right-radius: 22px;
+}
+
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    width: 277.8795px;
+    height: 140.4782px;
+    background-image: url(/assets/SVG/bush.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    left: 10px;
+}
+
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    width: 115px;
+    height: 93px;
+    background-image: url(/assets/SVG/cloud.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: -2px;
+    left: -5px;
+}
+
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    width: 115px;
+    height: 93px;
+    background-image: url(/assets/SVG/cloud2.svg);
+    background-size: cover;
+    background-position: center;
+    bottom: -2px;
+    right: -5px;
+}
+
+.total-count {
+    margin-top: 25px;
+    color: #fbff00;
+    text-align: center;
+}
+
+.total-count::after {
+    content: counter(score);
+}
+
+
+
+
+
