@@ -57,7 +57,7 @@ ul {
 }
 
 input[type="checkbox"] {
-    /* appearance: none; */
+    appearance: none;
     cursor: pointer;
     height: 70px;
     margin: 0;
@@ -71,7 +71,7 @@ input[type="checkbox"]:focus {
     appearance: none;
     outline: none;
 }
-💚😊
+
 input:checked {
     counter-increment: score;
 }
